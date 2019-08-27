@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 
 include(cmake/Deploy.cmake)
-include(cmake/Test.cmake)
+# FIXME: submit PR to disable this when not top-level project.
+#include(cmake/Test.cmake)
 
 project(Metal CXX)
 
@@ -31,6 +32,7 @@ set_target_properties(Metal PROPERTIES
 
 deploy_header_library(Metal)
 
-add_subdirectory(doc)
-add_subdirectory(example)
-add_subdirectory(test)
+# FIXME: submit PR to disable these when not top-level project.
+#add_subdirectory(doc)
+#add_subdirectory(example)
+#add_subdirectory(test)
